@@ -30,14 +30,16 @@ The proposed pipeline consists of three stages:
 - **Strong edges**: Top-K keywords per LDA topic form dense intra-topic connections (edge weight = 1).
 - **Weak edges**: Each non-core word connects to its most similar core word via cosine similarity (0 < weight < 1).
 
-![Graph Construction](figures/fig3_graph_construction.png)
+| Graph Construction | Node Embedding |
+| :---: | :---: |
+| ![Graph Construction](/Users/kookbab/Desktop/projects/Graph-Neural-Network-Based-Topic-Model-Integrating-Probabilistic-and-Embedding-Information-of-Words/figures/2.png) | ![Node Embedding](/Users/kookbab/Desktop/projects/Graph-Neural-Network-Based-Topic-Model-Integrating-Probabilistic-and-Embedding-Information-of-Words/figures/3.png) |
 
 ### Stage 3 — DMoN-based Clustering
 - Node features = SBERT word embeddings (384-dim)
 - A 3-layer GCN encoder performs message passing over the keyword graph.
 - DMoN's modularity loss + collapse regularization identifies structurally stable topic clusters.
 
-![Overall Process](figures/fig2_overall_process.png)
+![Overall Process](/Users/kookbab/Desktop/projects/Graph-Neural-Network-Based-Topic-Model-Integrating-Probabilistic-and-Embedding-Information-of-Words/figures/4.png)
 
 ---
 
