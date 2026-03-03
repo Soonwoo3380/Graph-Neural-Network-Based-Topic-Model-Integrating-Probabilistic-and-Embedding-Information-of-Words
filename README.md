@@ -1,9 +1,9 @@
 # Graph Neural Network-Based Topic Model Integrating Probabilistic and Embedding Information of Words
 
 > 🎓 **Master's Thesis (Dec 2025)**
-> - **Institution:** Department of Data Science, Kyungpook National University
 > - **Author:** Soonwoo Kim 
 > - **Supervisor:** Prof. Suhyeon Kim
+> - **Institution:** Department of Data Science, Kyungpook National University
 
 
 ---
