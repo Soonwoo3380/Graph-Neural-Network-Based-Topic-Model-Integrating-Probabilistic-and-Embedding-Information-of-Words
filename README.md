@@ -30,12 +30,12 @@ The proposed pipeline consists of three stages:
 - **BERTopic** (via SBERT, `paraphrase-multilingual-mpnet-base-v2`) produces 384-dim word embeddings.
 
 ### Stage 2 — Keyword Graph Construction
-- **Strong edges**: Top-K keywords per LDA topic form dense intra-topic connections (edge weight = 1).
-- **Weak edges**: Each non-core word connects to its most similar core word via cosine similarity (0 < weight < 1).
-
 | Edge Connections | Node Feature |
 | :---: | :---: |
 | ![Edge Connections](figures/2.png) | ![Node Feature](figures/3.png) |
+
+- **Strong edges**: Top-K keywords per LDA topic form dense intra-topic connections (edge weight = 1).
+- **Weak edges**: Each non-core word connects to its most similar core word via cosine similarity (0 < weight < 1).
 
 ### Stage 3 — DMoN-based Clustering
 - Node features = SBERT word embeddings (384-dim)
