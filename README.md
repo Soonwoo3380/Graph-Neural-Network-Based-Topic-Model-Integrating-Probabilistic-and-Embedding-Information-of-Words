@@ -39,7 +39,7 @@ The proposed pipeline consists of three stages:
 - A 3-layer GCN encoder performs message passing over the keyword graph.
 - DMoN's modularity loss + collapse regularization identifies structurally stable topic clusters.
 
-![Overall Process](/Users/kookbab/Desktop/projects/Graph-Neural-Network-Based-Topic-Model-Integrating-Probabilistic-and-Embedding-Information-of-Words/figures/4.png)
+![Overall Process](figures/4.png)
 
 ---
 
