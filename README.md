@@ -9,26 +9,26 @@
 
 ---
 
+## Curiosity
+This project originated from a fundamental question: **can heterogeneous data of different natures be jointly leveraged?** Data constructed for a specific task inherently possess properties well-suited to addressing that task's objectives. This inquiry was further refined into a more concrete question $-$ whether such properties could be effectively exploited across heterogeneous data sources. Motivated by this curiosity, we represent these relationships as a graph structure and apply the proposed framework to topic modeling.
+
+---
+
 ## Overview
 
-This repository contains the full implementation of a novel topic modeling framework
-that integrates **LDA**, **BERTopic**, and a **Graph Neural Network (DMoN)**
-to overcome the limitations of each standalone model.
+This repository contains the full implementation of a novel topic modeling framework that integrates **LDA**, **BERTopic**, and a **Deep Modularity Networks (DMoN)** to overcome the limitations of each standalone model.
 
-- **LDA** captures probabilistic co-occurrence structure but lacks semantic similarity.
-- **BERTopic** captures contextual coherence but lacks interpretability of topic-word relations.
-- **Our method** fuses both into a keyword graph and applies DMoN clustering to extract
-  structurally and semantically coherent topics.
+- LDA captures probabilistic co-occurrence structure but lacks semantic similarity.
+- BERTopic captures contextual coherence but lacks interpretability of topic-word relations.
+- Our method fuses probabilistic and embedding informations into a keyword graph and applies DMoN clustering to extract structurally and semantically coherent topics in an end-to-end manner.
 
 ---
 
 ## Methodology
 
-The proposed pipeline consists of three stages:
-
 ### Stage 1 — Topic Model Output Extraction
-- **LDA** produces a topic-word probability matrix (K words × T topics).
-- **BERTopic** (via SBERT, `paraphrase-multilingual-mpnet-base-v2`) produces 384-dim word embeddings.
+- LDA produces a topic-word probability matrix (K words × T topics).
+- BERTopic (via SBERT, `paraphrase-multilingual-mpnet-base-v2`) produces 384-dim word embeddings.
 
 ### Stage 2 — Keyword Graph Construction
 | Edge Connections | Node Feature |
